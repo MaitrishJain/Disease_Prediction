@@ -5,12 +5,13 @@
     <link rel="stylesheet" href="styles.css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    <link href="{{ url_for('static', filename='css/template.css') }}" rel="stylesheet">
-    <title>Prediction</title>
+   <link rel="stylesheet" href="template.css">
+    <title>Dengue Prediction</title>
   </head>
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">HEARTBEAT</a>
+  <h3><a class="navbar-brand" href="#">HEARTBEAT <3</a></h3>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -48,15 +49,13 @@
     <div style="text-align: center;">
       <h1>Hi {{session.Name}} !!</h1>
       <br>
-      <h2>Upload blood sample image</h2>
+      <h2>Please upload your blood sample image!</h2>
     </div>
     <form action="{{ url_for('predict_dengue') }}" method="post" enctype="multipart/form-data">
       <div class="form-group">
-        <label for="exampleInputimage">Upload</label>
+        <label for="exampleInputimage">Upload Below</label>
         <input type="file" class="form-control" id="exampleInputHR" name="file" placeholder="image" accept=".png, .jpg, .jpeg" required>
       </div>
-
-
 
     <button type="submit" class="btn btn-primary">Predict</button>
   </form>
